@@ -7,5 +7,5 @@ export interface TabItem {
     title: string;
     icon: string;
     page? : PageProp;
-    link? : string;
+    to? : string;
 }

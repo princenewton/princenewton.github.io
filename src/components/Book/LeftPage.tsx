@@ -12,7 +12,7 @@ import ProjectsIcon from './assets/icons/projects-icon.png'
 import EmailIcon from './assets/icons/email-icon.png'
 import CloseIcon from './assets/icons/close-icon.png'
 
-
+const CLOSE_ACTION = 'close';
 
 const pages = [
   { id: 0, title: "About Me", icon: ProfileIcon, page: ProfilePage},
@@ -23,21 +23,31 @@ const links = [
     { title: "GitHub", to: "https://github.com/princenewton", icon: GitHubIcon},
     { title: "LinkedIn", to: "https://www.linkedin.com/in/emmy-ricketts-3b3649247/", icon: LinkedInIcon},
     { title: "Email", to:"mailto:ecr10.uk@gmail.com", icon: EmailIcon},
-    { title: "Close", to:"close", icon: CloseIcon}
+    { title: "Close", to:CLOSE_ACTION, icon: CloseIcon}
 ];
 
-const LeftPage = () => {
+interface LeftPageProps {
+    setIsOpen : React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const LeftPage : React.FC<LeftPageProps> = ({ setIsOpen }) => {
 
     const [currentPage, updatePage] = useState<PageProp>(ProfilePage)
 
-    const changeTab = (newPage : TabItem) => {
+    const changeTab = (newPage: TabItem) => {
         if (newPage.page) {
             updatePage(newPage.page);
         }
-        else {
-            console.log("No page to update");
+        if (newPage.to) {
+            if (newPage.to === CLOSE_ACTION) {
+                console.log("CLOSE");
+                setIsOpen(false);
+            } else {
+                window.open(newPage.to, '_blank');
+            }
         }
-    }
+    };
+
 
     return (
         <div className="page" id="left-page">

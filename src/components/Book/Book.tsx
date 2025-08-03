@@ -40,8 +40,14 @@ const Book = () => {
     
     return (
         <div id="bookContainer">
-            <div className="book" onClick={changeBookState}>
-                {isOpen ? <LeftPage /> : <ClosedBook />}
+            <div className="book">
+                {isOpen ? (
+                    <LeftPage setIsOpen={setIsOpen} />
+                ) : (
+                    <div onClick={changeBookState}>
+                        <ClosedBook />
+                    </div>
+                )}
             </div>
             
             {isOpen && pageWidth && pageWidth > 900 && (
