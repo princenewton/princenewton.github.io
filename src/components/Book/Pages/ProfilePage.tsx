@@ -1,7 +1,7 @@
-import React from "react";
 import AvatarIcon from './../assets/avatar.png';
 import './ProfilePage.css';
 import BlockItem from "./BlockItem";
+import { ProfileDescription, LikesDescription, DislikesDescription } from './constants';
 
 const ProfilePage = () => {
     return (
@@ -13,19 +13,19 @@ const ProfilePage = () => {
                 </div>
                 <div id="bio-container" className="container">
                     <div className="block-wrapper">
-                        <BlockItem title="NAME" icon="name" />
-                        <BlockItem title="TITLE" icon="job" />
-                        <BlockItem title="LOCATION" icon="location" />
+                        <BlockItem title="Emilia (Emmy)" icon="name" />
+                        <BlockItem title="CS Student" icon="job" />
+                        <BlockItem title="University of St Andrews" icon="location" />
                     </div>
                 </div>
             </div>
             <div id="column-container" className="container">
-                <div id="desc-container" className="container">
-                    <BlockItem title="DESC" icon="desc"/>
+                <div id="desc-container">
+                    <BlockItem title="DESC" icon="desc" description={ProfileDescription}/>
                 </div>
-                <div id="likes-dislikes-container" className="container">
-                    <BlockItem title="LIKES" icon="like"/>
-                    <BlockItem title="DISLIKES" icon="dislike" />
+                <div id="likes-dislikes-container">
+                    <BlockItem title="LIKES" icon="like" description={LikesDescription}/>
+                    <BlockItem title="DISLIKES" icon="dislike" description={DislikesDescription} />
                 </div>
             </div>
         </div>

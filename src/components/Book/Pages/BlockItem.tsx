@@ -38,13 +38,17 @@ const BlockItem : React.FC<BlockProps> = ({title, description, icon}) => {
     const blockIcon = icon ? getIcon(icon) : DefaultIcon;
 
     return (
-        <div className="block-item">
-            <img src={blockIcon}/>
-            <p>{title}</p>
-            {
+        <div className="block-item pixel-corners">
+            <div className="block-header">
+                <img src={blockIcon}/>
+                <p id='block-title'>{title}</p>
+            </div>
+            <div className="block-content">
+                {
                 description &&
                 <p>{description}</p>
             }
+            </div>
         </div>
     );
 }

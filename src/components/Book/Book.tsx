@@ -3,6 +3,8 @@ import "./Book.css"
 import ClosedBook from "./ClosedBook";
 import LeftPage from "./LeftPage";
 import RightPage from "./RightPage";
+import ProfilePage from "./Pages/ProfilePage";
+import ProfilePageExtra from "./Pages/ProfilePageExtra";
 
 const useWindowSize = () => {
     const [windowSize, setWindowSize] = useState({
@@ -35,14 +37,16 @@ const Book = () => {
     const [isOpen, setIsOpen] = useState(false);
     const changeBookState = () => setIsOpen(true);
 
-
+    const [currentLeftPage, setCurrentLeftPage] = useState<React.FC>(() => ProfilePage);
+    const [currentRightPage, setCurrentRightPage] = useState<React.FC>(() => ProfilePageExtra);
+    
     const { width: pageWidth } = useWindowSize();
     
     return (
         <div id="bookContainer">
             <div className="book">
                 {isOpen ? (
-                    <LeftPage setIsOpen={setIsOpen} />
+                    <LeftPage setIsOpen={setIsOpen} currentLeftPage={currentLeftPage} setCurrentLeftPage={setCurrentLeftPage} setCurrentRightPage={setCurrentRightPage}/>
                 ) : (
                     <div onClick={changeBookState}>
                         <ClosedBook />
@@ -52,7 +56,7 @@ const Book = () => {
             
             {isOpen && pageWidth && pageWidth > 900 && (
                 <div className="book">
-                    <RightPage />
+                    <RightPage currentRightPage={currentRightPage}/>
                 </div>
             )}
 

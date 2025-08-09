@@ -5,7 +5,7 @@
 }
 
 #avatar-container {
-    width: 100%;
+    width: 80%;
     height: 100%;
 }
 
@@ -16,26 +16,23 @@
 }
 
 .container {
-    border: dashed 4px sienna;
-    border-radius: 10%;
-    padding: 2%;
-    margin-right: 5%;
-    width: 90%;
+    padding: 1%;
+    margin-right: 1%;
 }
 
 #row-container {
     display: flex;
     flex-direction: row;
     margin-top: 10%;
-    gap: 10px;
-
+    gap: 5px;
 }
 
 #column-container {
     display: flex;
     flex-direction: column;
-    margin-top: 10%;
-    gap: 10px;
+    margin-top: 5%;
+    height: 100%;
+    gap: 20px;
 }
 
 #bio-container {
@@ -45,32 +42,99 @@
     width: 100%;
 }
 
+ #likes-dislikes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 
 .block-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
     width: 100%;
     margin-right: 0;
 }
 
-
-.block-item {
+.block-header {
     display: flex;
     flex-direction: row;
     justify-items: center;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
+    padding-left: 15px;
+
+}
+
+.block-content {
+    padding-left: 15px;
+    margin-right: 5px;
+}
+
+.block-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
-    padding: 5px 0;
-    text-align: center;
+    padding: 10px 0;
     background: burlywood;
-    margin: 5% 0;
     border-radius: 15px;
 }
 
 .block-item img {
-    width: 15px;
-    height: 15px;
+    width: 18px;
+    height: 18px;
     display: flex;
     padding-left: 5px;
 }
 
+.pixel-corners {
+  clip-path: polygon(
+    0px calc(100% - 24px),
+    4px calc(100% - 24px),
+    4px calc(100% - 16px),
+    8px calc(100% - 16px),
+    8px calc(100% - 12px),
+    12px calc(100% - 12px),
+    12px calc(100% - 8px),
+    16px calc(100% - 8px),
+    16px calc(100% - 4px),
+    24px calc(100% - 4px),
+    24px 100%,
+    calc(100% - 24px) 100%,
+    calc(100% - 24px) calc(100% - 4px),
+    calc(100% - 16px) calc(100% - 4px),
+    calc(100% - 16px) calc(100% - 8px),
+    calc(100% - 12px) calc(100% - 8px),
+    calc(100% - 12px) calc(100% - 12px),
+    calc(100% - 8px) calc(100% - 12px),
+    calc(100% - 8px) calc(100% - 16px),
+    calc(100% - 4px) calc(100% - 16px),
+    calc(100% - 4px) calc(100% - 24px),
+    100% calc(100% - 24px),
+    100% 24px,
+    calc(100% - 4px) 24px,
+    calc(100% - 4px) 16px,
+    calc(100% - 8px) 16px,
+    calc(100% - 8px) 12px,
+    calc(100% - 12px) 12px,
+    calc(100% - 12px) 8px,
+    calc(100% - 16px) 8px,
+    calc(100% - 16px) 4px,
+    calc(100% - 24px) 4px,
+    calc(100% - 24px) 0px,
+    24px 0px,
+    24px 4px,
+    16px 4px,
+    16px 8px,
+    12px 8px,
+    12px 12px,
+    8px 12px,
+    8px 16px,
+    4px 16px,
+    4px 24px,
+    0px 24px
+  );
+}
 

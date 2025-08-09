@@ -1,10 +1,15 @@
 import React from 'react';
 import './Book.css';
 
-const RightPage = () => {
+interface RightPageProps {
+    currentRightPage: React.FC;
+}
+
+const RightPage : React.FC<RightPageProps> = ({ currentRightPage }) => {
+    const PageComponent = currentRightPage;
     return (
         <div className="page" id="right-page">
-            <p>Hello</p>
+            <PageComponent />
         </div>
     );
 }
