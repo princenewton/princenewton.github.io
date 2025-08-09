@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Tab from './Tab'
-import Page from './Page';
 import { PageProp, TabItem } from './types'
-import { ProfilePage, ProjectsPage } from './constants'
+import ProfilePage from './Pages/ProfilePage';
+// import { ProfilePage, ProjectsPage } from './constants'
 import './Book.css';
 
 import GitHubIcon from './assets/icons/github-icon.png'
@@ -16,7 +16,7 @@ const CLOSE_ACTION = 'close';
 
 const pages = [
   { id: 0, title: "About Me", icon: ProfileIcon, page: ProfilePage},
-  { id: 1, title: "Projects", icon: ProjectsIcon, page: ProjectsPage}
+  { id: 1, title: "Projects", icon: ProjectsIcon, page: ProfilePage}
 ];
 
 const links = [
@@ -32,11 +32,15 @@ interface LeftPageProps {
 
 const LeftPage : React.FC<LeftPageProps> = ({ setIsOpen }) => {
 
-    const [currentPage, updatePage] = useState<PageProp>(ProfilePage)
+    const [currentPage, updatePage] = useState<React.FC>(() => ProfilePage);
+
+    const PageComponent = currentPage;
 
     const changeTab = (newPage: TabItem) => {
         if (newPage.page) {
-            updatePage(newPage.page);
+            if (newPage.page !== currentPage) {
+                updatePage(newPage.page);
+            }
         }
         if (newPage.to) {
             if (newPage.to === CLOSE_ACTION) {
@@ -58,7 +62,7 @@ const LeftPage : React.FC<LeftPageProps> = ({ setIsOpen }) => {
                     (item, index) => <Tab tabItem={item} onClick={() => changeTab(item)}/>)}
             </div>
             <div className='pageContent'>
-                <Page pageProp={currentPage}/>
+                <PageComponent />
             </div>
         </div>
     );
