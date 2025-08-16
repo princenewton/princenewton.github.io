@@ -3,7 +3,7 @@ import './ProfilePage.css';
 import BlockItem from "./BlockItem";
 import { ProfileDescription, LikesDescription, DislikesDescription } from './constants';
 
-const ProfilePage = () => {
+const ProfilePage: React.FC = () => {
     return (
         <div className="profile-page">
             <div id="row-container">

@@ -3,6 +3,8 @@ import Tab from './Tab'
 import { TabItem } from './types'
 import {CLOSE_ACTION, PageObjects, LinkObjects} from './constants'
 import './Book.css';
+import ProfilePage from './Pages/ProfilePage';
+import ProjectsPage from './Pages/ProjectsPage';
 
 
 
@@ -21,9 +23,9 @@ const LeftPage : React.FC<LeftPageProps> = ({ setIsOpen, currentLeftPage, setCur
     const changeTab = (newPage: TabItem) => {
         if (newPage.page) {
             if (newPage.page !== currentLeftPage) {
-                setCurrentLeftPage(newPage.page);
-                console.log('Changing to page:', newPage.page);
-                console.log('Type of newPage.page:', typeof newPage.page);
+                currentLeftPage === ProfilePage ? 
+                    setCurrentLeftPage(() => ProjectsPage)
+                    : setCurrentLeftPage(() => ProfilePage);
 
                 if (newPage.extrapage) {
                     setCurrentRightPage(newPage.extrapage);
