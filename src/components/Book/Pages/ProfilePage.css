@@ -70,6 +70,7 @@
 .block-content {
     padding-left: 15px;
     margin-right: 5px;
+    white-space: pre-line;
 }
 
 .block-item {
