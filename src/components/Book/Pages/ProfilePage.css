@@ -12,12 +12,12 @@
 #avatar-icon {
     width: 90% !important;
     height: 100% !important;
-    border: solid 4px sienna;
+    border: solid 5px rgb(105, 78, 44);
 }
 
 .container {
     padding: 1%;
-    margin-right: 1%;
+    margin-right: 5%;
 }
 
 #row-container {
@@ -63,12 +63,12 @@
     justify-items: center;
     align-items: center;
     gap: 8px;
-    padding-left: 15px;
+    padding-left: 10px;
 
 }
 
 .block-content {
-    padding-left: 15px;
+    padding-left: 10px;
     margin-right: 5px;
     white-space: pre-line;
 }
@@ -78,8 +78,9 @@
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    padding: 10px 0;
-    background: burlywood;
+    padding: 5px 0;
+    background: rgb(238, 205, 162);
+    border: solid 5px rgb(105, 78, 44);
     border-radius: 15px;
 }
 
