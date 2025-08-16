@@ -60,6 +60,8 @@
 #right-page {
     background-image: url("./assets/page-right.png");
     background-position: left;
+    width: 100%;
+    font-size: larger;
 }
 
 .tab {
