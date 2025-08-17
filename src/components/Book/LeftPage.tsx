@@ -27,10 +27,10 @@ const LeftPage : React.FC<LeftPageProps> = ({ setIsOpen, currentLeftPage, setCur
                     setCurrentLeftPage(() => ProjectsPage)
                     : setCurrentLeftPage(() => ProfilePage);
 
-                if (newPage.extrapage) {
-                    setCurrentRightPage(newPage.extrapage);
-                    console.log("extra page!");
-                }
+                // if (newPage.extrapage) {
+                //     setCurrentRightPage(newPage.extrapage);
+                //     console.log("extra page!");
+                // }
             }
         }
         if (newPage.to) {

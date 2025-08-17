@@ -1,6 +1,6 @@
 import BlockItem from "./BlockItem";
 import StatItem from "./StatItem";
-import { dndInfo, dndSpells, StatList } from "./constants";
+import { dndInfo, dndSpells, ExtraStats, featuresAndTraits, StatList } from "./constants";
 
 const ProfilePageExtra = () => {
 
@@ -9,12 +9,22 @@ const ProfilePageExtra = () => {
             <div id='profile-extra-content'>
                 <div id='stats'>
                     {StatList.map((item, index) =>
-                    <StatItem name={item.name} value={item.value} />)}
+                    <StatItem name={item.name} value={item.value} icon='default' />)}
                 </div>
                 <div id='character-info'>
-                    <BlockItem title='Info' description={dndInfo}/>
-                    <BlockItem title="Spells" description={dndSpells}/>
-                </div>
+                    <BlockItem title='Level 5 Human Wizard' icon="book"/>
+                    <div id='extra-stats'>
+                        {ExtraStats.map((item, index) =>
+                        <StatItem name={item.name} value={item.value} icon={item.icon}/>)}
+                    </div>
+                    <div id='extra-text-content'>
+                        <BlockItem title="Spells" description={dndSpells} icon="book"/>
+                    </div>
+                    <div id='featuresAndTraits'>
+                        {featuresAndTraits.map((item, index) =>
+                            <BlockItem title={item.title} description={item.description} />)}
+                    </div>  
+                </div>              
             </div>         
         </div>
     );

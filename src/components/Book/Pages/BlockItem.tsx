@@ -7,6 +7,7 @@ import NameIcon from './assets/name-icon.png';
 import JobIcon from './assets/job-icon.png';
 import LocationIcon from './assets/location-icon.png';
 import DescIcon from './assets/desc-icon.png';
+import BookIcon from './assets/book-icon.png';
 
 interface BlockProps {
     title: string;
@@ -16,6 +17,8 @@ interface BlockProps {
 
 const getIcon = (iconName : string) => {
     switch(iconName){
+        case 'book':
+            return BookIcon;
         case 'name':
             return NameIcon;
         case 'desc':

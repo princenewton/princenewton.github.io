@@ -7,7 +7,7 @@ const ProfilePage: React.FC = () => {
     return (
         <div className="profile-page">
             <div id="row-container">
-                <div id='avatar-container' className='pixel-corners'>
+                <div id='avatar-container' className='pixel-corners--wrapper'>
                     <img id='avatar-icon' src={AvatarIcon}/>
                     {/* <BlockItem title="PRONOUN?" /> */}
                 </div>

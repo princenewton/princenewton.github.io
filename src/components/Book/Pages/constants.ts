@@ -36,15 +36,62 @@ export const StatList = [
     },
 ];
 
+export const ExtraStats = [
+    {
+        name: 'AC',
+        value: '10',
+        icon: 'ac'
+    },
+    {
+        name: 'Init',
+        value: '-2',
+        icon: 'initative'
+    },
+    {
+        name: 'Speed',
+        value: '30',
+        icon: 'speed'
+    },
+    {
+        name: 'HP',
+        value: '24',
+        icon: 'hp'
+    }
+];
+
 export const dndInfo = `Level: 5
     Race: Human
     Class: Wizard
 `;
 
-export const dndSpells = `- Algorithmic Ward (Lvl 1)
-    - Caffeine Surge (Lvl 1)
-    - Comprehend Languages (Lvl 1)
-    - Syntax Shield (Lvl 2)
-    - Debug Insight (Lvl 2) 
-    - Binary Blink (Lvl 3)
+export const dndSpells = `- Algorithmic Ward
+    - Syntax Shield
+    - Binary Blink
 `;
+
+export const caffeineDependencyTrait = `Your veins hum with arcane espresso.
+    You can cast Haste once per long rest without a spell slot.
+`;
+
+export const rubberDuckDebuggingTrait = `You carry a enchanted rubber duck familiar.
+    Once per short rest, add a modifier equal to your level to an Arcana check.
+`;
+
+export const elegantCodeFeature = `You seek elegance in both code and spellcraft, inspiring others to understand your magic. 
+    Allies within 10ft gain advantage on saving throws against being charmed or frightened while you are concentrating on a spell.
+`;
+
+export const featuresAndTraits = [
+    {
+        title: 'Caffeine Dependency',
+        description: caffeineDependencyTrait
+    },
+    {
+        title: 'Rubber Duck Debugging',
+        description: rubberDuckDebuggingTrait
+    },
+    {
+        title: 'Elegant Code',
+        description: elegantCodeFeature
+    }
+];
