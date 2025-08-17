@@ -5,6 +5,9 @@ import {CLOSE_ACTION, PageObjects, LinkObjects} from './constants'
 import './Book.css';
 import ProfilePage from './Pages/ProfilePage';
 import ProjectsPage from './Pages/ProjectsPage';
+import { ProfileDescription } from './Pages/constants';
+import ProfilePageExtra from './Pages/ProfilePageExtra';
+import ProjectsPageExtra from './Pages/ProjectsPageExtra';
 
 
 
@@ -23,14 +26,15 @@ const LeftPage : React.FC<LeftPageProps> = ({ setIsOpen, currentLeftPage, setCur
     const changeTab = (newPage: TabItem) => {
         if (newPage.page) {
             if (newPage.page !== currentLeftPage) {
-                currentLeftPage === ProfilePage ? 
-                    setCurrentLeftPage(() => ProjectsPage)
-                    : setCurrentLeftPage(() => ProfilePage);
 
-                // if (newPage.extrapage) {
-                //     setCurrentRightPage(newPage.extrapage);
-                //     console.log("extra page!");
-                // }
+                if (currentLeftPage == ProfilePage) {
+                    setCurrentLeftPage(() => ProjectsPage);
+                    setCurrentRightPage(() => ProjectsPageExtra);
+                }
+                else {
+                    setCurrentLeftPage(() => ProfilePage);
+                    setCurrentRightPage(() => ProfilePageExtra);
+                }
             }
         }
         if (newPage.to) {

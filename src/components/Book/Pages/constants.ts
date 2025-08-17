@@ -95,3 +95,14 @@ export const featuresAndTraits = [
         description: elegantCodeFeature
     }
 ];
+
+export const portfolioWebsiteDescription = `The website you are on right now!
+Built using React and Typescript.`;
+
+export const ProjectBlockItems = [
+    {
+        title: 'Portfolio Website',
+        description: portfolioWebsiteDescription,
+        icon: 'desc'
+    }
+]
