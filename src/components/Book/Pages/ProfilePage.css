@@ -92,7 +92,7 @@
     width: 18px;
     height: 18px;
     display: flex;
-    padding-left: 5px;
+    padding-left: 10px;
 }
 
 .stat-item {
@@ -142,7 +142,7 @@
 #featuresAndTraits {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
 }
 
 #character-info {
@@ -160,7 +160,7 @@
 
 #extra-stats > .stat-item {
     width: 58px;
-    height: 60px;
+    height: 55px;
 }
 
 .pixel-corners,

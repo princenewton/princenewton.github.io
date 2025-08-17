@@ -9,13 +9,13 @@ const ProfilePageExtra = () => {
             <div id='profile-extra-content'>
                 <div id='stats'>
                     {StatList.map((item, index) =>
-                    <StatItem name={item.name} value={item.value} icon='default' />)}
+                    <StatItem name={item.name} value={item.value} />)}
                 </div>
                 <div id='character-info'>
-                    <BlockItem title='Level 5 Human Wizard' icon="book"/>
+                    <BlockItem title='Level 5 Human Wizard' icon="name"/>
                     <div id='extra-stats'>
                         {ExtraStats.map((item, index) =>
-                        <StatItem name={item.name} value={item.value} icon={item.icon}/>)}
+                        <StatItem name={item.name} value={item.value} />)}
                     </div>
                     <div id='extra-text-content'>
                         <BlockItem title="Spells" description={dndSpells} icon="book"/>
