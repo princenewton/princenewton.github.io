@@ -78,7 +78,7 @@ export const rubberDuckDebuggingTrait = `You carry a enchanted rubber duck famil
 `;
 
 export const elegantCodeFeature = `You seek elegance in both code and spellcraft, inspiring others to understand your magic. 
-    Allies within 10ft gain advantage on saving throws against being charmed or frightened while you are concentrating on a spell.
+    Allies within 10ft gain advantage on saving throws against being charmed while you are concentrating.
 `;
 
 export const featuresAndTraits = [
