@@ -1,5 +1,5 @@
 import React from "react";
-import './ProfilePage.css';
+import './Page.css';
 import DefaultIcon from './assets/default-icon.png';
 import LikeIcon from './assets/like-icon.png';
 import DislikeIcon from './assets/dislike-icon.png';

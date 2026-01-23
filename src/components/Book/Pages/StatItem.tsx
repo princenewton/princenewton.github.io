@@ -1,5 +1,5 @@
 import React from "react";
-import './ProfilePage.css';
+import './Page.css';
 import DefaultIcon from './assets/default-icon.png';
 import HPIcon from './assets/hp-icon.png';
 import ACIcon from './assets/ac-icon.png';

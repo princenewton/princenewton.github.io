@@ -8,7 +8,7 @@ interface RightPageProps {
 const RightPage : React.FC<RightPageProps> = ({ currentRightPage }) => {
     const PageComponent = currentRightPage;
     return (
-        <div className="page" id="right-page">
+        <div className="page pageContent" id="right-page">
             <PageComponent />
         </div>
     );

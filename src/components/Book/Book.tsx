@@ -12,6 +12,12 @@ const useWindowSize = () => {
         height: undefined as number | undefined,
     });
 
+    // const handleResize = () => {
+    //     setWindowSize({
+    //         width: window.visualViewport?.width ?? window.innerWidth,
+    //         height: window.visualViewport?.height ?? window.innerHeight,
+    //     });
+    // };
 
     const handleResize = () => {
         setWindowSize({
@@ -54,7 +60,7 @@ const Book = () => {
                 )}
             </div>
             
-            {isOpen && pageWidth && pageWidth > 900 && (
+            {isOpen && pageWidth && pageWidth > 900 &&(
                 <div className="book">
                     <RightPage currentRightPage={currentRightPage}/>
                 </div>

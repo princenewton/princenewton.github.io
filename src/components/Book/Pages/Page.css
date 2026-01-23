@@ -1,0 +1,119 @@
+/** Profile Page **/
+
+.column-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.row-container {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.page {
+    margin-top: 5px;
+}
+
+.block-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-right: 0;
+}
+
+.extraPage {
+    width: 75%;
+    margin-left: 5px;
+}
+
+/* #projects-page {
+    width: 100%;
+} */
+
+#avatar-container {
+    width: 80%;
+    height: 100%;
+}
+
+#avatar-icon {
+    width: 90% !important;
+    height: 100% !important;
+    border: solid 5px rgb(105, 78, 44);
+}
+
+.pixel-corners {
+  clip-path: polygon(
+    0px calc(100% - 10px),
+    5px calc(100% - 10px),
+    5px calc(100% - 5px),
+    10px calc(100% - 5px),
+    10px 100%,
+    calc(100% - 10px) 100%,
+    calc(100% - 10px) calc(100% - 5px),
+    calc(100% - 5px) calc(100% - 5px),
+    calc(100% - 5px) calc(100% - 10px),
+    100% calc(100% - 10px),
+    100% 10px,
+    calc(100% - 5px) 10px,
+    calc(100% - 5px) 5px,
+    calc(100% - 10px) 5px,
+    calc(100% - 10px) 0px,
+    10px 0px,
+    10px 5px,
+    5px 5px,
+    5px 10px,
+    0px 10px
+  );
+}
+
+.block-header {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    gap: 8px;
+    padding-left: 10px;
+
+}
+
+.block-content {
+    padding-left: 10px;
+    margin-right: 5px;
+    white-space: pre-line;
+}
+
+.block-item {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    padding: 5px 0;
+    background: rgb(247, 219, 183);
+    border-radius: 15px;
+}
+
+.block-item img {
+    width: 18px;
+    height: 18px;
+    display: flex;
+    /* padding-left: 10px; */
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 8vh;
+    background: rgb(247, 219, 183);
+    border-radius: 15px;
+}
+/* 
+.stat-item img {
+    width: 18px;
+    height: 18px;
+    display: flex;
+} */

@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './components/Header/Header'
 import Book from './components/Book/Book';
-import './App.css';
+// import './App.css';
 import './base.css'
 
 function App() {

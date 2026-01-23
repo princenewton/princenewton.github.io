@@ -12,7 +12,31 @@
     src: url("../ByteBounce.ttf");
 }
 
+p {
+    margin: 0%;
+}
+
+#bookContainer {
+  height: 85vh;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--primary-background-green);
+}
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+}
+
 * {
   font-family: byteFont;
+  box-sizing: border-box;
 }
 

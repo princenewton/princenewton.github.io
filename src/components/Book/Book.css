@@ -1,31 +1,59 @@
-
+/** Background Images **/
 
 .book img {
-    height: 90vh;
+    max-height: 85vh;
+    height: auto;
     width: auto;
     object-fit: contain;
 }
 
+#left-page {
+    background-image: url("./assets/page-left.png");
+    background-position: right;
+    max-height: 85vh;
+    height: auto;
+}
+
+#right-page {
+    background-image: url("./assets/page-right.png");
+    background-position: left;
+    max-height: 85vh;
+    height: auto;
+    /* font-size: larger; */
+}
+
+/** Containers **/
 
 #bookContainer {
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     width: auto;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    height: calc(100vh - 56px);
+    /* overflow: hidden; */
+}
+
+.book {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .page {
     background-size: contain;
     background-repeat: no-repeat;
-    height: 90vh;
     aspect-ratio: 3 / 4;
     display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: left;
+    max-width: 100%;
+      /* width: min(90vw, 90vh); */
+    position: relative;
+    /* flex-direction: row; */
+    /* justify-content: left; */
+    /* align-items: left; */
 }
+
+/** Content **/
 
 .pageContent {
     flex: 8;
@@ -35,11 +63,11 @@
 }
 
 .pageContent h1 {
-    font-size: 300%;
+    font-size: clamp(1.4rem, 4vw, 2.2rem);
 }
 
 .pageContent p {
-    font-size: 150%;
+    font-size: clamp(1rem, 3vw, 1.3rem);
 }
 
 .navigation {
@@ -48,24 +76,12 @@
     flex-direction: column;
     justify-content: left;
     align-items: left;
-    padding-left: 15%;
+    padding-left: 12%;
     padding-top: 5%;
 }
 
-#left-page {
-    background-image: url("./assets/page-left.png");
-    background-position: right;
-}
-
-#right-page {
-    background-image: url("./assets/page-right.png");
-    background-position: left;
-    width: 100%;
-    font-size: larger;
-}
-
 .tab {
-    width: 80%;
+    width: 85%;
     height: 50px;
     background-image: url("./assets/button-inactive.png");
     background-size: cover;
@@ -82,6 +98,6 @@
     width: 40px !important;
     height: 40px !important;
     margin-top: 5px;
+    margin-left: 20%;
     object-fit: contain;
 }
-

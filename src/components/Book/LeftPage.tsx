@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Tab from './Tab'
 import { TabItem } from './types'
 import {CLOSE_ACTION, PageObjects, LinkObjects} from './constants'
 import './Book.css';
 import ProfilePage from './Pages/ProfilePage';
 import ProjectsPage from './Pages/ProjectsPage';
-import { ProfileDescription } from './Pages/constants';
 import ProfilePageExtra from './Pages/ProfilePageExtra';
 import ProjectsPageExtra from './Pages/ProjectsPageExtra';
 
@@ -27,14 +26,14 @@ const LeftPage : React.FC<LeftPageProps> = ({ setIsOpen, currentLeftPage, setCur
         if (newPage.page) {
             if (newPage.page !== currentLeftPage) {
 
-                if (currentLeftPage == ProfilePage) {
-                    setCurrentLeftPage(() => ProjectsPage);
-                    setCurrentRightPage(() => ProjectsPageExtra);
-                }
-                else {
-                    setCurrentLeftPage(() => ProfilePage);
-                    setCurrentRightPage(() => ProfilePageExtra);
-                }
+                // if (currentLeftPage === ProfilePage) {
+                //     setCurrentLeftPage(() => ProjectsPage);
+                //     setCurrentRightPage(() => ProjectsPageExtra);
+                // }
+                // else {
+                //     setCurrentLeftPage(() => ProfilePage);
+                //     setCurrentRightPage(() => ProfilePageExtra);
+                // }
             }
         }
         if (newPage.to) {
